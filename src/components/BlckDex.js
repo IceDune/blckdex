@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
+
+import PokemonView from './PokemonView';
 
 class BlckDex extends Component{
   constructor(props) {
@@ -16,18 +18,18 @@ class BlckDex extends Component{
     }
   }
 
-  async sendRequest(item, input) {debugger
+  async sendRequest(item, input) {
     let request = await fetch(this.api + item + '/' + input + '/');
     let jsonData = await request.json();
     console.log(jsonData);
   }
 
-  renderItem(item) {debugger
+  renderItem(item) {
     let input = document.getElementById('inputField').value;
     this.sendRequest(item, input);
   }
 
-  renderView(key) {debugger
+  renderView(key) {
     //const viewRef = document.getElementById('itemArea');
     this.setState({
       item: key
@@ -61,6 +63,9 @@ class BlckDex extends Component{
           </div>
           <div id="itemArea"></div>
           <div id="renderDesc"></div>
+        </div>
+        <div id="pokeArea">
+          <PokemonView />
         </div>
       </div>
     )
