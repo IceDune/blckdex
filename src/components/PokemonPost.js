@@ -1,5 +1,7 @@
 import React,{ Component} from 'react';
 
+import './PokemonPost.css';
+
 class PokemonPost extends Component {
     constructor(props){
         super(props);
@@ -13,7 +15,7 @@ class PokemonPost extends Component {
         const api = "https://pokeapi.co/api/v2/";
         let request = await fetch(api + 'pokemon/' + pokeId + '/');
         let jsonData = await request.json();
-        console.log(jsonData);
+        //console.log(jsonData);
         this.setState({ pokemondata: jsonData });
     }
 

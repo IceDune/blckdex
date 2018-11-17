@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 
 import PokemonView from './PokemonView';
+import './BlckDex.css';
 
 class BlckDex extends Component{
   constructor(props) {

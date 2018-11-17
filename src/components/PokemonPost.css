@@ -1,0 +1,14 @@
+.post {
+    width: 11em;
+    border: 3px solid #173e43;
+    background-color: #3fb0ac;
+    border-radius: 4px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2em;
+}
